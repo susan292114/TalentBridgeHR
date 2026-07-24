@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentBridge AI | Connecting Talent. Creating Opportunities.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0B0B0E',
+                            dark: '#121212',
+                            slate: '#1A1A24',
+                            gold: '#D4AF37',
+                            goldBright: '#FFD700',
+                            goldChampagne: '#E5C158',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-brand-black text-slate-200 font-['Plus_Jakarta_Sans'] antialiased min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black">
+
+    <!-- Sticky Glassmorphic Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-black/80 border-b border-brand-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="TalentBridge AI Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="hidden sm:block">
+                    <span class="text-xl font-bold tracking-wider text-white block leading-none">TALENTBRIDGE <span class="text-brand-gold">AI</span></span>
+                    <span class="text-[9px] tracking-widest text-brand-goldChampagne font-medium uppercase">AI • PERSON • COMPANY</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" onclick="navigateTo('home')" class="nav-link active text-slate-300 hover:text-brand-gold transition-colors">Home</a>
+                <a href="#about" onclick="navigateTo('about')" class="nav-link text-slate-300 hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#services" onclick="navigateTo('services')" class="nav-link text-slate-300 hover:text-brand-gold transition-colors">Services</a>
+                <a href="#jobs" onclick="navigateTo('jobs')" class="nav-link text-slate-300 hover:text-brand-gold transition-colors">Job Board</a>
+                <a href="#employers" onclick="navigateTo('employers')" class="nav-link text-slate-300 hover:text-brand-gold transition-colors">For Employers</a>
+                <a href="#contact" onclick="navigateTo('contact')" class="nav-link text-slate-300 hover:text-brand-gold transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#contact" onclick="navigateTo('contact')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-brand-gold text-brand-gold text-xs font-semibold uppercase tracking-wider hover:bg-brand-gold hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                    Schedule Consultation
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-brand-gold focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 border-b border-brand-gold/20 px-6 py-6 space-y-4">
+            <a href="#home" onclick="navigateTo('home')" class="block text-slate-200 hover:text-brand-gold py-2 border-b border-white/5">Home</a>
+            <a href="#about" onclick="navigateTo('about')" class="block text-slate-200 hover:text-brand-gold py-2 border-b border-white/5">About Us</a>
+            <a href="#services" onclick="navigateTo('services')" class="block text-slate-200 hover:text-brand-gold py-2 border-b border-white/5">Services</a>
+            <a href="#jobs" onclick="navigateTo('jobs')" class="block text-slate-200 hover:text-brand-gold py-2 border-b border-white/5">Job Board</a>
+            <a href="#employers" onclick="navigateTo('employers')" class="block text-slate-200 hover:text-brand-gold py-2 border-b border-white/5">For Employers</a>
+            <a href="#contact" onclick="navigateTo('contact')" class="block text-slate-200 hover:text-brand-gold py-2">Contact</a>
+            <a href="#contact" onclick="navigateTo('contact')" class="block text-center mt-4 px-5 py-3 rounded-full bg-brand-gold text-black font-bold uppercase text-xs">
+                Schedule Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main id="main-content" class="flex-grow">
+
+        <!-- PAGE 1: HOME PAGE -->
+        <section id="page-home" class="page-section">
+            <div class="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.12),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 space-y-8">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-xs font-medium tracking-wide">
+                                <i class="fa-solid fa-sparkles text-brand-goldBright"></i>
+                                <span>Next-Gen Executive Recruitment & AI Matching</span>
+                            </div>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                                Connecting Talent. <br>
+                                <span class="bg-gradient-to-r from-brand-gold via-brand-goldChampagne to-brand-goldBright bg-clip-text text-transparent">Creating Opportunities.</span>
+                            </h1>
+                            <p class="text-lg text-slate-400 max-w-2xl font-light">
+                                TalentBridge AI bridges the gap between top-tier professionals and forward-thinking enterprises using intelligent matching, executive precision, and full-spectrum recruitment strategies.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                                <a href="#employers" onclick="navigateTo('employers')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldChampagne text-black font-bold text-center tracking-wider hover:opacity-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                    Hire Top Talent <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="#jobs" onclick="navigateTo('jobs')" class="px-8 py-4 rounded-xl border border-brand-gold/40 text-slate-200 font-semibold text-center hover:border-brand-gold hover:text-brand-gold transition-all bg-brand-slate/30">
+                                    Browse Open Roles
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 relative flex justify-center">
+                            <div class="relative w-full max-w-md p-2 rounded-3xl bg-gradient-to-b from-brand-gold/30 to-transparent border border-brand-gold/20 shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+                                <div class="bg-brand-slate p-6 rounded-2xl space-y-6">
+                                    <img src="assets/logo.png" alt="TalentBridge AI Banner" class="w-full h-auto rounded-xl object-contain py-4 bg-brand-black/50 border border-brand-gold/20">
+                                    <div class="flex items-center justify-between p-4 bg-brand-black/60 rounded-xl border border-brand-gold/20">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                                                <i class="fa-solid fa-chart-line text-lg"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs text-slate-400">Match Accuracy</p>
+                                                <p class="text-lg font-bold text-white">98.4% Precision</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs text-brand-gold font-bold bg-brand-gold/10 px-2.5 py-1 rounded-md">Verified</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Banner -->
+            <div class="border-y border-brand-gold/20 bg-brand-slate/40 py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">500+</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Executive Placements</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">98%</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Retention Rate</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">15+</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Global Markets</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">24/7</div>
+                            <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">AI Voice Concierge</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: ABOUT US -->
+        <section id="page-about" class="page-section hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">Pioneering Human & Artificial Intelligence</h1>
+                    <p class="text-slate-400">At TalentBridge AI, we unite advanced computational analysis with nuanced human intuition to transform corporate hiring.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                        <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-bullseye mr-2"></i> Our Mission</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">To seamlessly connect top-tier global talent with market-leading organizations through precision AI tools and specialized human intelligence.</p>
+                    </div>
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                        <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-eye mr-2"></i> Our Vision</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">To become the world's premier AI-integrated recruitment agency, delivering unparalleled efficiency, speed, and cultural retention.</p>
+                    </div>
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                        <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-shield-halved mr-2"></i> Core Values</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">Integrity, Precision, Uncompromising Diversity, Transparency, and continuous technological innovation in every search.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: SERVICES -->
+        <section id="page-services" class="page-section hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">Our Recruitment Services</h1>
+                    <p class="text-slate-400">Flexible, high-impact talent solutions crafted to scale with your organizational demands.</p>
+                </div>
+                <div class="overflow-x-auto bg-brand-slate/40 rounded-2xl border border-brand-gold/20 p-6">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-brand-gold/20 text-brand-gold text-sm uppercase">
+                                <th class="py-4 px-4">Feature / Tier</th>
+                                <th class="py-4 px-4">Contingency Search</th>
+                                <th class="py-4 px-4">Retained Executive Search</th>
+                                <th class="py-4 px-4">HR Advisory</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-white/5">
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Ideal For</td>
+                                <td class="py-4 px-4 text-slate-400">Mid-to-Senior Roles</td>
+                                <td class="py-4 px-4 text-slate-400">C-Suite & VP Executives</td>
+                                <td class="py-4 px-4 text-slate-400">Enterprise Operations</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">AI Candidate Screening</td>
+                                <td class="py-4 px-4 text-brand-gold"><i class="fa-solid fa-check"></i> Standard</td>
+                                <td class="py-4 px-4 text-brand-gold"><i class="fa-solid fa-check"></i> Deep Match AI</td>
+                                <td class="py-4 px-4 text-brand-gold"><i class="fa-solid fa-check"></i> Custom Models</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: JOB BOARD -->
+        <section id="page-jobs" class="page-section hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                    <div>
+                        <h1 class="text-3xl font-extrabold text-white">Executive Job Board</h1>
+                        <p class="text-slate-400 text-sm mt-1">Explore leadership and tech roles vetted by TalentBridge AI.</p>
+                    </div>
+                </div>
+                <div id="job-cards-grid" class="grid gap-6"></div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: FOR EMPLOYERS -->
+        <section id="page-employers" class="page-section hidden py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl font-extrabold text-white">Submit Talent Request</h1>
+                    <p class="text-slate-400 mt-2">Tell us about your organization's hiring goals.</p>
+                </div>
+                <form id="employer-form" class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-2">Company Name</label>
+                        <input type="text" required class="w-full bg-brand-black border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brand-gold outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-2">Role Title to Fill</label>
+                        <input type="text" required placeholder="e.g. Chief Technology Officer or Senior Business Analyst" class="w-full bg-brand-black border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brand-gold outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldBright text-black font-bold py-3.5 rounded-xl uppercase tracking-wider text-sm transition-colors">
+                        Submit Hiring Request
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PAGE 6: CONTACT -->
+        <section id="page-contact" class="page-section hidden py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h1 class="text-3xl font-extrabold text-white mb-4">Get In Touch</h1>
+                        <p class="text-slate-400 mb-8">Our executive search advisors are ready to discuss your strategic needs.</p>
+                        <p class="text-sm text-slate-300">Email: contact@talentbridge.ai</p>
+                    </div>
+                    <div class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl">
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-1">Full Name</label>
+                                <input type="text" required class="w-full bg-brand-black border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brand-gold outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-1">Email Address</label>
+                                <input type="email" required class="w-full bg-brand-black border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brand-gold outline-none">
+                            </div>
+                            <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldBright text-black font-bold py-3 rounded-xl uppercase tracking-wider text-sm transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black border-t border-brand-gold/20 py-8 text-center text-xs text-slate-400">
+        © 2026 TalentBridge AI. All Rights Reserved.
+    </footer>
+
+    <!-- ElevenLabs Voice AI Widget Integration -->
+    <elevenlabs-convai agent-id="agent_6201ky8b3mfpezaaa0epz5xx7vnq"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+    <!-- App JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
