@@ -1,0 +1,462 @@
+/* ============================================
+   TALENTBRIDGE AI - PREMIUM ANIMATIONS
+   ============================================
+   Smooth, elegant, performance-optimized animations
+   using GPU-accelerated transforms and opacity.
+   ============================================ */
+
+/* ============================================
+   1. ANIMATION KEYFRAMES
+   ============================================ */
+
+/* Hero Headline - Staggered entrance */
+@keyframes heroHeadlineReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Badge - Subtle entrance */
+@keyframes heroBadgeReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hero Paragraph - Delayed fade-in */
+@keyframes heroParagraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CTA Button - Entrance with lift */
+@keyframes ctaButtonReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hero Visual - Subtle float and glow */
+@keyframes heroVisualReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hover: Button lift and glow */
+@keyframes buttonHoverLift {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-4px);
+    }
+}
+
+/* Hover: Card elevation */
+@keyframes cardHoverLift {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-6px);
+    }
+}
+
+/* Gold glow pulse */
+@keyframes goldGlowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    }
+}
+
+/* Animated gold border */
+@keyframes goldBorderGlow {
+    0%, 100% {
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        border-color: rgba(212, 175, 55, 0.8);
+    }
+}
+
+/* Icon rotation */
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Arrow slide right */
+@keyframes arrowSlideRight {
+    from {
+        transform: translateX(0);
+        opacity: 0.7;
+    }
+    to {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+}
+
+/* Navbar backdrop blur transition */
+@keyframes navbarBackdropReveal {
+    from {
+        backdrop-filter: blur(0px);
+        border-bottom-color: rgba(212, 175, 55, 0.1);
+    }
+    to {
+        backdrop-filter: blur(10px);
+        border-bottom-color: rgba(212, 175, 55, 0.3);
+    }
+}
+
+/* Scroll section fade-in and slide-up */
+@keyframes scrollSectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered item reveal (for grids) */
+@keyframes staggerItemReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulsing node (for network visualization) */
+@keyframes pulsingNode {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Animated connecting line (for journeys) */
+@keyframes lineDrawAnimation {
+    from {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Glowing dot travel animation */
+@keyframes dotTravel {
+    0% {
+        offset-distance: 0%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
+    }
+}
+
+/* Form input focus glow */
+@keyframes inputFocusGlow {
+    from {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.2);
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+    to {
+        box-shadow: 0 0 15px 0 rgba(212, 175, 55, 0.5);
+        border-color: rgba(212, 175, 55, 0.7);
+    }
+}
+
+/* Success checkmark */
+@keyframes successCheckmark {
+    from {
+        opacity: 0;
+        transform: scale(0) rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+/* ============================================
+   2. ANIMATION UTILITY CLASSES
+   ============================================ */
+
+/* Hero entrance animations */
+.animate-hero-badge {
+    animation: heroBadgeReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-hero-headline {
+    animation: heroHeadlineReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+    opacity: 0;
+}
+
+.animate-hero-paragraph {
+    animation: heroParagraphReveal 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+    opacity: 0;
+}
+
+.animate-cta-button {
+    animation: ctaButtonReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-cta-button:nth-child(2) {
+    animation: ctaButtonReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+    opacity: 0;
+}
+
+.animate-hero-visual {
+    animation: heroVisualReveal 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+    opacity: 0;
+}
+
+/* Interactive hover states */
+.hover-lift:hover {
+    animation: buttonHoverLift 0.3s ease-out forwards;
+}
+
+.card-hover-lift:hover {
+    animation: cardHoverLift 0.3s ease-out forwards;
+}
+
+.glow-on-hover:hover {
+    animation: goldGlowPulse 1s ease-in-out infinite;
+}
+
+.icon-hover-rotate:hover i {
+    animation: iconRotate 0.6s ease-in-out forwards;
+}
+
+.arrow-slide:hover .arrow-icon {
+    animation: arrowSlideRight 0.4s ease-out forwards;
+}
+
+/* Scroll-triggered animations (AOS.js integrations) */
+.aos-animate-fade-up {
+    animation: scrollSectionReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.aos-animate-stagger {
+    animation: staggerItemReveal 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Navbar scroll state */
+.navbar-scrolled {
+    animation: navbarBackdropReveal 0.4s ease-in-out forwards;
+}
+
+/* Pulsing node (network visualization) */
+.pulse-node {
+    animation: pulsingNode 2s ease-in-out infinite;
+}
+
+/* Form input focus state */
+input:focus,
+textarea:focus {
+    animation: inputFocusGlow 0.4s ease-out forwards;
+}
+
+/* ============================================
+   3. ACCESSIBILITY - PREFERS REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Keep essential transitions, just faster */
+    .transition-colors,
+    .transition-all {
+        transition-duration: 0.15s !important;
+    }
+}
+
+/* ============================================
+   4. MICRO-INTERACTIONS
+   ============================================ */
+
+/* Smooth transitions for interactive elements */
+.nav-link {
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.job-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-primary {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-secondary {
+    transition: all 0.3s ease-out;
+}
+
+/* Button hover effects */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.8);
+}
+
+/* Service card hover */
+.service-card:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+}
+
+.service-card:hover i {
+    color: rgba(212, 175, 55, 0.9);
+}
+
+/* Job card hover */
+.job-card:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+/* Mobile menu smooth transitions */
+#mobile-menu {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#mobile-menu.hidden {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* ============================================
+   5. PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Will-change for animated elements */
+.will-animate {
+    will-change: transform, opacity;
+}
+
+.will-animate-scroll {
+    will-change: transform, opacity;
+}
+
+/* GPU acceleration hints */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ============================================
+   6. RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Mobile: Reduce animation intensity */
+@media (max-width: 768px) {
+    .animate-hero-badge {
+        animation-duration: 0.5s;
+    }
+
+    .animate-hero-headline {
+        animation-duration: 0.6s;
+    }
+
+    .animate-hero-paragraph {
+        animation-duration: 0.5s;
+    }
+
+    .animate-cta-button {
+        animation-duration: 0.5s;
+    }
+
+    .card-hover-lift:hover {
+        animation: cardHoverLift 0.3s ease-out;
+        transform: translateY(-3px);
+    }
+
+    .hover-lift:hover {
+        animation: buttonHoverLift 0.3s ease-out;
+        transform: translateY(-2px);
+    }
+}
+
+/* ============================================
+   7. DARK MODE SUPPORT
+   ============================================ */
+
+/* Ensure animations work in dark mode */
+.dark .animate-hero-badge,
+.dark .animate-hero-headline,
+.dark .animate-hero-paragraph,
+.dark .animate-cta-button,
+.dark .animate-hero-visual {
+    /* Inherits from base animations */
+}
