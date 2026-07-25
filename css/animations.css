@@ -306,6 +306,11 @@
     animation: pulsingNode 2s ease-in-out infinite;
 }
 
+/* Line draw animation */
+.line-draw-animation {
+    animation: lineDrawAnimation 1.5s ease-in-out forwards;
+}
+
 /* Form input focus state */
 input:focus,
 textarea:focus {
@@ -329,6 +334,25 @@ textarea:focus {
     .transition-colors,
     .transition-all {
         transition-duration: 0.15s !important;
+    }
+
+    /* Disable pulsing animations */
+    .pulse-node {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    /* Disable line draw animations */
+    .line-draw-animation {
+        animation: none !important;
+        stroke-dashoffset: 0 !important;
+    }
+
+    /* AOS animations should be instant and visible */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
@@ -445,6 +469,11 @@ textarea:focus {
     .hover-lift:hover {
         animation: buttonHoverLift 0.3s ease-out;
         transform: translateY(-2px);
+    }
+
+    /* Reduce animation duration on mobile for AOS */
+    [data-aos] {
+        --aos-duration: 800ms;
     }
 }
 
