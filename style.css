@@ -4,3 +4,21 @@
     border-bottom: 2px solid #D4AF37;
     padding-bottom: 4px;
 }
+
+/* AOS animations state - ensure proper visibility */
+[data-aos] {
+    opacity: 0;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Respect prefers-reduced-motion for AOS */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
