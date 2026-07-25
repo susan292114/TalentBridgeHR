@@ -29,7 +29,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body class="bg-brand-black text-slate-200 font-['Plus_Jakarta_Sans'] antialiased min-h-screen flex flex-col justify-between selection:bg-brand-gold selection:text-black">
 
@@ -57,7 +62,7 @@
 
             <!-- CTA Button & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <a href="#contact" onclick="navigateTo('contact')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-brand-gold text-brand-gold text-xs font-semibold uppercase tracking-wider hover:bg-brand-gold hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">
+                <a href="#contact" onclick="navigateTo('contact')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-brand-gold text-brand-gold text-xs font-semibold uppercase tracking-wider hover:bg-brand-gold hover:text-black transition-all duration-300">
                     Schedule Consultation
                 </a>
                 <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-brand-gold focus:outline-none">
@@ -90,27 +95,27 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-7 space-y-8">
-                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-xs font-medium tracking-wide">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-xs font-medium tracking-wide" data-aos="fade-up" data-aos-duration="800">
                                 <i class="fa-solid fa-sparkles text-brand-goldBright"></i>
                                 <span>Next-Gen Executive Recruitment & AI Matching</span>
                             </div>
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                                 Connecting Talent. <br>
                                 <span class="bg-gradient-to-r from-brand-gold via-brand-goldChampagne to-brand-goldBright bg-clip-text text-transparent">Creating Opportunities.</span>
                             </h1>
-                            <p class="text-lg text-slate-400 max-w-2xl font-light">
-                                TalentBridge AI bridges the gap between top-tier professionals and forward-thinking enterprises using intelligent matching, executive precision, and full-spectrum recruitment strategies.
+                            <p class="text-lg text-slate-400 max-w-2xl font-light" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                                TalentBridge AI bridges the gap between top-tier professionals and forward-thinking enterprises using intelligent matching, executive precision, and full-spectrum recruitment solutions.
                             </p>
-                            <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                                <a href="#employers" onclick="navigateTo('employers')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldChampagne text-black font-bold text-center tracking-wider hover:opacity-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                            <div class="flex flex-col sm:flex-row gap-4 pt-2" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                                <a href="#employers" onclick="navigateTo('employers')" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldChampagne text-black font-bold text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                                     Hire Top Talent <i class="fa-solid fa-arrow-right ml-2"></i>
                                 </a>
-                                <a href="#jobs" onclick="navigateTo('jobs')" class="px-8 py-4 rounded-xl border border-brand-gold/40 text-slate-200 font-semibold text-center hover:border-brand-gold hover:text-brand-gold transition-all bg-brand-slate/30">
+                                <a href="#jobs" onclick="navigateTo('jobs')" class="px-8 py-4 rounded-xl border border-brand-gold/40 text-slate-200 font-semibold text-center hover:border-brand-gold hover:bg-brand-gold/10 transition-all duration-300">
                                     Browse Open Roles
                                 </a>
                             </div>
                         </div>
-                        <div class="lg:col-span-5 relative flex justify-center">
+                        <div class="lg:col-span-5 relative flex justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                             <div class="relative w-full max-w-md p-2 rounded-3xl bg-gradient-to-b from-brand-gold/30 to-transparent border border-brand-gold/20 shadow-[0_0_50px_rgba(212,175,55,0.1)]">
                                 <div class="bg-brand-slate p-6 rounded-2xl space-y-6">
                                     <img src="assets/logo.png" alt="TalentBridge AI Banner" class="w-full h-auto rounded-xl object-contain py-4 bg-brand-black/50 border border-brand-gold/20">
@@ -137,21 +142,250 @@
             <div class="border-y border-brand-gold/20 bg-brand-slate/40 py-12">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div>
+                        <div data-aos="fade-up" data-aos-duration="800">
                             <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">500+</div>
                             <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Executive Placements</div>
                         </div>
-                        <div>
+                        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                             <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">98%</div>
                             <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Retention Rate</div>
                         </div>
-                        <div>
+                        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">15+</div>
                             <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">Global Markets</div>
                         </div>
-                        <div>
+                        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                             <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">24/7</div>
                             <div class="text-xs sm:text-sm text-slate-400 mt-1 uppercase tracking-wider">AI Voice Concierge</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Animation Section: Talent → AI Intelligence → Opportunity -->
+            <div class="border-t border-brand-gold/20 bg-brand-black/50 py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Our Intelligent Ecosystem</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto">A seamless network connecting talent, artificial intelligence, and opportunity in real-time.</p>
+                    </div>
+
+                    <!-- Network Visualization -->
+                    <div class="flex items-center justify-center">
+                        <div class="w-full max-w-5xl">
+                            <!-- Desktop: Horizontal Layout -->
+                            <div class="hidden md:flex items-center justify-between relative mb-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                <!-- Talent Node -->
+                                <div class="flex flex-col items-center flex-1" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
+                                    <div class="relative w-24 h-24 mb-6">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-gold/40 to-brand-gold/10 border-2 border-brand-gold/60 pulse-node"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-gold text-4xl">
+                                            <i class="fa-solid fa-users"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">Talent</h3>
+                                    <p class="text-xs text-slate-400 mt-2 max-w-sm">Global network of vetted executive professionals</p>
+                                </div>
+
+                                <!-- Connecting Line 1 (Talent to AI) -->
+                                <div class="flex-1 h-1 relative mx-4">
+                                    <svg class="w-full h-full" viewBox="0 0 100 4" preserveAspectRatio="none">
+                                        <line x1="0" y1="2" x2="100" y2="2" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="100" class="line-draw-animation" />
+                                        <defs>
+                                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                                <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <!-- AI Intelligence Node (Center) -->
+                                <div class="flex flex-col items-center flex-1" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300">
+                                    <div class="relative w-28 h-28 mb-6">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-goldBright/30 to-brand-gold/10 border-2 border-brand-goldBright/70 pulse-node" style="animation-delay: 0.2s;"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-goldBright text-5xl">
+                                            <i class="fa-solid fa-brain"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">AI Intelligence</h3>
+                                    <p class="text-xs text-slate-400 mt-2 max-w-sm">Precision matching powered by advanced algorithms</p>
+                                </div>
+
+                                <!-- Connecting Line 2 (AI to Opportunity) -->
+                                <div class="flex-1 h-1 relative mx-4">
+                                    <svg class="w-full h-full" viewBox="0 0 100 4" preserveAspectRatio="none">
+                                        <line x1="0" y1="2" x2="100" y2="2" stroke="url(#goldGradient2)" stroke-width="2" stroke-dasharray="100" class="line-draw-animation" style="animation-delay: 0.3s;" />
+                                        <defs>
+                                            <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                                <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <!-- Opportunity Node -->
+                                <div class="flex flex-col items-center flex-1" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="400">
+                                    <div class="relative w-24 h-24 mb-6">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-gold/40 to-brand-gold/10 border-2 border-brand-gold/60 pulse-node" style="animation-delay: 0.4s;"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-gold text-4xl">
+                                            <i class="fa-solid fa-rocket"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white">Opportunity</h3>
+                                    <p class="text-xs text-slate-400 mt-2 max-w-sm">Perfect role matches with leading enterprises</p>
+                                </div>
+                            </div>
+
+                            <!-- Mobile: Vertical Layout -->
+                            <div class="md:hidden flex flex-col items-center space-y-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                <!-- Talent Node -->
+                                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                                    <div class="relative w-20 h-20 mb-4">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-gold/40 to-brand-gold/10 border-2 border-brand-gold/60 pulse-node"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-gold text-3xl">
+                                            <i class="fa-solid fa-users"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-base font-bold text-white">Talent</h3>
+                                    <p class="text-xs text-slate-400 mt-2 text-center max-w-xs">Global network of vetted executives</p>
+                                </div>
+
+                                <!-- Connecting Line Mobile -->
+                                <div class="w-1 h-12 relative">
+                                    <svg class="w-full h-full" viewBox="0 4 4 100" preserveAspectRatio="none">
+                                        <line x1="2" y1="0" x2="2" y2="100" stroke="url(#goldGradientV)" stroke-width="2" stroke-dasharray="100" class="line-draw-animation" />
+                                        <defs>
+                                            <linearGradient id="goldGradientV" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                                <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <!-- AI Intelligence Node -->
+                                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                                    <div class="relative w-24 h-24 mb-4">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-goldBright/30 to-brand-gold/10 border-2 border-brand-goldBright/70 pulse-node" style="animation-delay: 0.2s;"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-goldBright text-4xl">
+                                            <i class="fa-solid fa-brain"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-base font-bold text-white">AI Intelligence</h3>
+                                    <p class="text-xs text-slate-400 mt-2 text-center max-w-xs">Precision matching algorithms</p>
+                                </div>
+
+                                <!-- Connecting Line Mobile 2 -->
+                                <div class="w-1 h-12 relative">
+                                    <svg class="w-full h-full" viewBox="0 4 4 100" preserveAspectRatio="none">
+                                        <line x1="2" y1="0" x2="2" y2="100" stroke="url(#goldGradientV2)" stroke-width="2" stroke-dasharray="100" class="line-draw-animation" style="animation-delay: 0.3s;" />
+                                        <defs>
+                                            <linearGradient id="goldGradientV2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                                <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.3" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <!-- Opportunity Node -->
+                                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                                    <div class="relative w-20 h-20 mb-4">
+                                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-brand-gold/40 to-brand-gold/10 border-2 border-brand-gold/60 pulse-node" style="animation-delay: 0.4s;"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center text-brand-gold text-3xl">
+                                            <i class="fa-solid fa-rocket"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-base font-bold text-white">Opportunity</h3>
+                                    <p class="text-xs text-slate-400 mt-2 text-center max-w-xs">Perfect role matches</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Section: Discover → Connect → Grow -->
+            <div class="border-t border-brand-gold/20 bg-brand-slate/20 py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Your Journey to Success</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto">From discovery to growth, we guide you every step of the way.</p>
+                    </div>
+
+                    <!-- Desktop Timeline (Horizontal) -->
+                    <div class="hidden md:block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="flex items-center justify-between relative">
+                            <!-- Connecting line behind -->
+                            <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold/20 via-brand-gold/60 to-brand-gold/20 -translate-y-1/2" style="z-index: 0;"></div>
+
+                            <!-- Step 1: Discover -->
+                            <div class="flex flex-col items-center flex-1 relative z-10" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border-3 border-brand-gold flex items-center justify-center text-brand-gold text-3xl mb-6 shadow-lg">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white text-center mb-2">Discover</h3>
+                                <p class="text-sm text-slate-400 text-center max-w-xs">Explore tailored opportunities or post your ideal candidate profile with our AI-powered platform.</p>
+                            </div>
+
+                            <!-- Step 2: Connect -->
+                            <div class="flex flex-col items-center flex-1 relative z-10" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
+                                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-brand-goldBright/30 to-brand-gold/10 border-3 border-brand-goldBright flex items-center justify-center text-brand-goldBright text-3xl mb-6 shadow-lg">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white text-center mb-2">Connect</h3>
+                                <p class="text-sm text-slate-400 text-center max-w-xs">Our team facilitates introductions with precision matching and strategic guidance at every touchpoint.</p>
+                            </div>
+
+                            <!-- Step 3: Grow -->
+                            <div class="flex flex-col items-center flex-1 relative z-10" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
+                                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border-3 border-brand-gold flex items-center justify-center text-brand-gold text-3xl mb-6 shadow-lg">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white text-center mb-2">Grow</h3>
+                                <p class="text-sm text-slate-400 text-center max-w-xs">Thrive in your new role with ongoing support, mentorship, and career acceleration programs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Timeline (Vertical) -->
+                    <div class="md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="flex flex-col items-center space-y-8 relative">
+                            <!-- Vertical connector line -->
+                            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-gold/20 via-brand-gold/60 to-brand-gold/20 -translate-x-1/2" style="z-index: 0;"></div>
+
+                            <!-- Step 1: Discover -->
+                            <div class="flex flex-col items-center relative z-10 w-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border-3 border-brand-gold flex items-center justify-center text-brand-gold text-2xl mb-4 shadow-lg">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <h3 class="text-base font-bold text-white text-center mb-2">Discover</h3>
+                                <p class="text-xs text-slate-400 text-center max-w-xs">Explore tailored opportunities or post your ideal candidate with our AI platform.</p>
+                            </div>
+
+                            <!-- Step 2: Connect -->
+                            <div class="flex flex-col items-center relative z-10 w-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-goldBright/30 to-brand-gold/10 border-3 border-brand-goldBright flex items-center justify-center text-brand-goldBright text-2xl mb-4 shadow-lg">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <h3 class="text-base font-bold text-white text-center mb-2">Connect</h3>
+                                <p class="text-xs text-slate-400 text-center max-w-xs">Our team facilitates introductions with precision matching and strategic guidance.</p>
+                            </div>
+
+                            <!-- Step 3: Grow -->
+                            <div class="flex flex-col items-center relative z-10 w-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand-gold/30 to-brand-gold/10 border-3 border-brand-gold flex items-center justify-center text-brand-gold text-2xl mb-4 shadow-lg">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h3 class="text-base font-bold text-white text-center mb-2">Grow</h3>
+                                <p class="text-xs text-slate-400 text-center max-w-xs">Thrive in your new role with ongoing support and career acceleration.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,20 +395,20 @@
         <!-- PAGE 2: ABOUT US -->
         <section id="page-about" class="page-section hidden py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
                     <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">Pioneering Human & Artificial Intelligence</h1>
                     <p class="text-slate-400">At TalentBridge AI, we unite advanced computational analysis with nuanced human intuition to transform corporate hiring.</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-bullseye mr-2"></i> Our Mission</h3>
-                        <p class="text-sm text-slate-300 leading-relaxed">To seamlessly connect top-tier global talent with market-leading organizations through precision AI tools and specialized human intelligence.</p>
+                        <p class="text-sm text-slate-300 leading-relaxed">To seamlessly connect top-tier global talent with market-leading organizations through precision AI tools and specialized executive search expertise.</p>
                     </div>
-                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-eye mr-2"></i> Our Vision</h3>
-                        <p class="text-sm text-slate-300 leading-relaxed">To become the world's premier AI-integrated recruitment agency, delivering unparalleled efficiency, speed, and cultural retention.</p>
+                        <p class="text-sm text-slate-300 leading-relaxed">To become the world's premier AI-integrated recruitment agency, delivering unparalleled efficiency, speed, and cultural resonance in executive placements.</p>
                     </div>
-                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20">
+                    <div class="bg-brand-slate p-8 rounded-2xl border border-brand-gold/20" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <h3 class="text-xl font-bold text-brand-gold mb-3"><i class="fa-solid fa-shield-halved mr-2"></i> Core Values</h3>
                         <p class="text-sm text-slate-300 leading-relaxed">Integrity, Precision, Uncompromising Diversity, Transparency, and continuous technological innovation in every search.</p>
                     </div>
@@ -185,11 +419,11 @@
         <!-- PAGE 3: SERVICES -->
         <section id="page-services" class="page-section hidden py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
                     <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4">Our Recruitment Services</h1>
                     <p class="text-slate-400">Flexible, high-impact talent solutions crafted to scale with your organizational demands.</p>
                 </div>
-                <div class="overflow-x-auto bg-brand-slate/40 rounded-2xl border border-brand-gold/20 p-6">
+                <div class="overflow-x-auto bg-brand-slate/40 rounded-2xl border border-brand-gold/20 p-6" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="border-b border-brand-gold/20 text-brand-gold text-sm uppercase">
@@ -221,7 +455,7 @@
         <!-- PAGE 4: JOB BOARD -->
         <section id="page-jobs" class="page-section hidden py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12" data-aos="fade-up" data-aos-duration="800">
                     <div>
                         <h1 class="text-3xl font-extrabold text-white">Executive Job Board</h1>
                         <p class="text-slate-400 text-sm mt-1">Explore leadership and tech roles vetted by TalentBridge AI.</p>
@@ -234,11 +468,11 @@
         <!-- PAGE 5: FOR EMPLOYERS -->
         <section id="page-employers" class="page-section hidden py-16">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
                     <h1 class="text-3xl font-extrabold text-white">Submit Talent Request</h1>
                     <p class="text-slate-400 mt-2">Tell us about your organization's hiring goals.</p>
                 </div>
-                <form id="employer-form" class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl space-y-6">
+                <form id="employer-form" class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl space-y-6" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-2">Company Name</label>
                         <input type="text" required class="w-full bg-brand-black border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brand-gold outline-none">
@@ -258,12 +492,12 @@
         <section id="page-contact" class="page-section hidden py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-12">
-                    <div>
+                    <div data-aos="fade-up" data-aos-duration="800">
                         <h1 class="text-3xl font-extrabold text-white mb-4">Get In Touch</h1>
                         <p class="text-slate-400 mb-8">Our executive search advisors are ready to discuss your strategic needs.</p>
                         <p class="text-sm text-slate-300">Email: contact@talentbridge.ai</p>
                     </div>
-                    <div class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl">
+                    <div class="bg-brand-slate border border-brand-gold/20 p-8 rounded-2xl" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                         <form id="contact-form" class="space-y-4">
                             <div>
                                 <label class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-1">Full Name</label>
@@ -289,12 +523,21 @@
         © 2026 TalentBridge AI. All Rights Reserved.
     </footer>
 
-    <!-- ElevenLabs Voice AI Widget Integration -->
+    <!-- ElevenLabs Voice AI Widget Integration (Single Instance) -->
     <elevenlabs-convai agent-id="agent_6201ky8b3mfpezaaa0epz5xx7vnq"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
+    <!-- AOS (Animate On Scroll) Initialization -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+
     <!-- App JavaScript -->
-    <script src="js/app.js"></script>
+    <script src="script.js."></script>
 </body>
 </html>
-<elevenlabs-convai agent-id="agent_6201ky8b3mfpezaaa0epz5xx7vnq"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
